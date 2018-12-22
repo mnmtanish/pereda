@@ -1,12 +1,16 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { Application } from './components/Application';
+import { Provide } from './framework/injector';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const injector = {
+  appConfig: { name: 'Pereda' },
+};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <Provide injector={injector}>
+    <Application />
+  </Provide>,
+  document.getElementById('root'),
+);
