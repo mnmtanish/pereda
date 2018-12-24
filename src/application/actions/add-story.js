@@ -1,10 +1,8 @@
-import { randomId } from '../../framework/random';
-
 export const ADD_STORY = 'ADD_STORY';
 
-export function addStory(time, text) {
+export function addStory(id, text) {
   return {
     type: ADD_STORY,
-    data: { id: randomId(), time, text },
+    data: { id, text },
   };
 }

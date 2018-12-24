@@ -1,0 +1,7 @@
+.story-item {
+  display: flex;
+  margin: 0 100px 30px 100px;
+  outline: none;
+  flex-direction: column;
+  position: relative;
+}
