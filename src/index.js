@@ -1,16 +1,17 @@
 import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Application } from './components/Application';
-import { Provide } from './framework/injector';
+import { Provider } from 'react-redux';
+import { create } from './application';
+import { Application } from './component/Application';
 
-const injector = {
-  appConfig: { name: 'Pereda' },
-};
+const store = create({
+  APP_NAME: 'Pereda',
+});
 
 ReactDOM.render(
-  <Provide injector={injector}>
+  <Provider store={store}>
     <Application />
-  </Provide>,
+  </Provider>,
   document.getElementById('root'),
 );
