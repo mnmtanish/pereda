@@ -29,7 +29,7 @@ export class StoryText extends PureComponent {
       <textarea
         ref={this.textarea}
         className='story-text'
-        placeholder='What happened today?'
+        placeholder='What happened?'
         value={this.state.text}
         onChange={this.emit}
       />

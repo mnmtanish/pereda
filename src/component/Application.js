@@ -1,7 +1,7 @@
 import './application.css';
 import React from 'react';
 import { connect } from 'react-redux';
-import { addStory } from '../application/actions/add-story';
+import { setStory } from '../application/actions/set-story';
 import { StoryItems } from './story-items.ui';
 
 function mapState(state) {
@@ -9,10 +9,13 @@ function mapState(state) {
 }
 
 function mapDispatch(dispatch) {
-  return { onChange: (date, text) => dispatch(addStory(date, text))};
+  return { onChange: (id, text) => dispatch(setStory(id, text)) };
 }
 
-export const Application = connect(mapState, mapDispatch)(props => (
+export const Application = connect(
+  mapState,
+  mapDispatch,
+)(props => (
   <div className='container'>
     <StoryItems stories={props.stories} onChange={props.onChange} />
   </div>

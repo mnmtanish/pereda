@@ -12,6 +12,7 @@
   "dependencies": {
     "autosize": "^4.0.2",
     "immer": "^1.9.3",
+    "lodash": "^4.17.11",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
