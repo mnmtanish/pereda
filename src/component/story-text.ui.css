@@ -20,3 +20,9 @@
 .story-item-current .story-text {
   color: #bbb;
 }
+
+@media only screen and (max-width: 600px) {
+  .story-text {
+    padding: 0 0 40px 0;
+  }
+}
